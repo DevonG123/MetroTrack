@@ -1,0 +1,263 @@
+/* YOUR CUSTOM STYLES */
+
+.breadcrumb-dn img{
+	height: 38px;
+	width: auto;
+}
+
+.header-logo {
+	height: 32px;
+	margin: auto;
+	text-align: center;
+}
+
+.header-logo img{
+	height: 32px;
+	width: auto;
+	text-align: center;
+}
+
+#slider-logo {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 200%;
+	height: auto;
+}
+
+
+.title-image {
+	width: 100%;
+	text-align: center;
+}
+
+.title-image img{
+	width: auto;
+	height: auto;
+	 max-width: 95%;     
+}
+
+#home-section h1{
+	font-size: 9vw;
+}
+
+#home-section h5{
+	text-align: center;
+	font-size: 5vw;
+}
+
+@media all and (min-width: 550px) {
+#home-section h5{
+    font-size: 30px;
+  }
+}
+
+#choose-section md-form{
+	text-align: center;
+}
+
+
+.scrollable-menu { 
+	height: auto;
+    max-height: 200px;
+    overflow-x: hidden; 
+}
+
+.main-container h1{
+margin-top: 50px;
+text-align: center;
+font-size: 35px;
+}
+
+.slider-title {
+	text-align: center;
+}
+
+.side-nav a{
+	color: white;
+	width: 240px;
+	padding: 0px;
+}
+
+.slider-title a{
+	padding-left: 0px;
+}
+
+.step-nav li{
+	width: 240px;
+	padding-left: 0px;
+	height: 50px;
+}
+
+.step-nav {
+	padding: 20px;
+	padding-left: 0px;
+	text-align: left;
+	border-bottom-color: white;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.step-nav a{
+	width: 220px;
+	padding-left: 20px;
+	font-size: 1rem;
+}
+
+.step-nav li:hover{
+	background-color: #f4b400;
+}
+
+.extras-nav {
+	padding: 20px;
+	padding-left: 0px;
+	text-align: left;
+}
+
+.extras-nav a{
+	color: white;
+	width: 220px;
+	padding-left: 20px;
+	font-size: 1rem;
+}
+
+.extras-nav li{
+	width: 240px;
+	height: 50px;
+}
+
+.extras-nav li:hover{
+	background-color: #f4b400;
+}
+
+
+#choose-section {
+	text-align: center;
+}
+
+#track-section {
+	text-align: center;
+}
+
+#share-section {
+	text-align: center;
+}
+
+.line-selection label{
+	width: 90px;
+	padding: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.line-selection2 label{
+	width: 100px;
+	height: 45px;
+	padding: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.line-selection {
+	text-align: center;
+}
+
+.line-selection2 {
+	text-align: center;
+}
+
+#line-select-special {
+	padding-top: 15px;
+}
+
+.direction-selection {
+	width: 260px;
+	padding: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.direction-selection button {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.table-wrapper-2 {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+
+/* Help and FAQs */
+.help-section h1{
+	text-align: center;
+}
+
+.help-section card-header {
+	text-align: center;
+}
+
+.help-section card-body {
+	text-align: left;
+}
+
+.card-header h4{
+	font-size: 18px;
+	font-weight: 400;
+}
+
+#southern-station-select {
+	display: none;
+}
+
+#central-station-select {
+	display: none;
+}
+
+#northern-station-select {
+	display: none;
+}
+
+#capeFlats-station-select {
+	display: none;
+}
+
+#malmesburyWorcester-station-select {
+	display: none;
+}
+
+.instructions {
+	color: #0c436b;
+}
+
+.table-wrapper-2 tbody th {
+	font-size: 16px;
+	text-align: center;
+	color: #0c436b;
+}
+
+.table-wrapper-2 tbody th:hover{
+	font-size: 20px;
+}
+
+.table-wrapper-2 tbody th:active{
+	
+	text-decoration: underline;
+	color: #f4b400;
+}
+
+.table-wrapper-2 th {
+	font-size: 16px;
+	text-align: center;
+}
+
+.timetable {
+	display: none;
+}
+
+

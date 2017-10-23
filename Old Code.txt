@@ -1,0 +1,111 @@
+ <!--Dropdown yellow-->
+        <div class="dropdown">
+
+            <!--Trigger-->
+            <button class="btn btn-warning dropdown-toggle dropdown" type="button" id="lineDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Southern Stations</button>
+            
+
+            <!--Menu-->
+            <div class="dropdown-menu scrollable-menu" id="lineDropdownSouthern">
+                <a class="dropdown-item" value="Cape Town">Cape Town</a>
+                <a class="dropdown-item" value="Woodstock">Woodstock</a>
+                <a class="dropdown-item" href="#choose-section">Salt River</a>
+                <a class="dropdown-item" href="#choose-section">Observatory</a>
+                <a class="dropdown-item" href="#choose-section">Mowbray</a>
+                <a class="dropdown-item" href="#choose-section">Rosebank</a>
+                <a class="dropdown-item" href="#choose-section">Rondebosch</a>
+                <a class="dropdown-item" href="#choose-section">Newlands</a>
+                <a class="dropdown-item" href="#choose-section">Claremont</a>
+                <a class="dropdown-item" href="#choose-section">Harfield Road</a>
+                <a class="dropdown-item" href="#choose-section">Kenilworth</a>
+                <a class="dropdown-item" href="#choose-section">Wynberg</a>
+                <a class="dropdown-item" href="#choose-section">Wittebome</a>
+                <a class="dropdown-item" href="#choose-section">Plumstead</a>
+                <a class="dropdown-item" href="#choose-section">Steurhof</a>
+                <a class="dropdown-item" href="#choose-section">Dieprivier</a>
+                <a class="dropdown-item" href="#choose-section">Heathfield</a>
+                <a class="dropdown-item" href="#choose-section">Retreat</a>
+                <a class="dropdown-item" href="#choose-section">Steenberg</a>
+                <a class="dropdown-item" href="#choose-section">Lakeside</a>
+                <a class="dropdown-item" href="#choose-section">False Bay</a>
+                <a class="dropdown-item" href="#choose-section">Muizenberg</a>
+                <a class="dropdown-item" href="#choose-section">St. James</a>
+                <a class="dropdown-item" href="#choose-section">Kalk Bay</a>
+                <a class="dropdown-item" href="#choose-section">Fish Hoek</a>
+                <a class="dropdown-item" href="#choose-section">Sunny Cove</a>
+                <a class="dropdown-item" href="#choose-section">Glencairn</a>
+                <a class="dropdown-item" href="#choose-section">Simon's Town</a>
+            </div>
+        </div>
+        <!--/Dropdown yellow-->
+        
+        <br>
+        <div class="md-form">
+    <input value="Kenilworth" type="text" id="stationTextBox" class="form-control" disabled>
+    <label class="disabled" for="lineTextBox">Selected Station</label>
+</div>
+
+
+
+
+
+
+<!--Line select - Radio buttons-->
+
+<div class="btn-group line-selection" data-toggle="buttons">
+  <div>
+  <label onclick="southernButtonClick()" class="btn btn-amber active">
+    <input type="radio" name="train-line" id="southern" autocomplete="off" checked> Southern
+  </label>
+</div>
+<div>
+  <label onclick="centralButtonClick()" class="btn btn-amber">
+    <input type="radio" name="train-line" id="central" autocomplete="off" checked> Central
+  </label>
+  </div>
+  <div>
+  <label onclick="northernButtonClick()" class="btn btn-amber">
+    <input type="radio" name="train-line" id="northern" autocomplete="off" checked> Northern
+  </label>
+  </div>
+     <label onclick="capeFlatsButtonClick()" class="btn btn-amber" id="line-select-special">
+    <input type="radio" name="train-line" id="cape-flats" autocomplete="off" checked> Cape Flats
+  </label>
+  <label onclick="malmesburyWorcesterButtonClick()" class="btn btn-amber">
+    <input type="radio" name="train-line" id="malmesburyWorcester" autocomplete="off" checked> Malmesbury/Worcester
+  </label>
+</div>
+    <br>
+
+
+
+
+
+
+//Show hide timetable (broken)
+/*    var instruction2 = document.getElementById("instruct2");
+
+        var allTimetables = document.getElementsByClassName("timetable");
+
+        var kenilworth_I_W = document.getElementById("kenilworth-inward-weekday");
+        var kenilworth_O_W = document.getElementById("kenilworth-outward-weekday");
+        var mowbray_I_W = document.getElementById("mowbray-inward-weekday");
+        var mowbray_O_W = document.getElementById("mowbray-outward-weekday");
+
+
+        if (Direction !== "0" && Station !== "0") {
+            instruction2.style.display = "none";
+
+            if (Station == "kenilworth") {
+                if (Direction == "i") {
+                    kenilworth_I_W.style.display = "block";
+                    kenilworth_O_W.style.display = "none";
+                    mowbray_I_W.style.display = "none";
+                    mowbray_O_W.style.display = "none";
+                }
+            }
+        } else {
+            instruction2.style.font-weight = "400px";
+        }    */
+
+
