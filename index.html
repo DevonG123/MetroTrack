@@ -11864,19 +11864,23 @@
 <p class="tip">(selected from above)</p>
 
  
-
-        <br>
          <div class="md-form">
     <input value="102" type="text" id="selected-train2" class="form-control" disabled>
     <label class="disabled" for="selected-train2">Selected Train</label>
-</div>  
-<br>
+</div> 
+<h5>Your name/alias:</h5>
+<p class="tip">(optional)</p> 
+
+
 <div class="md-form">
     <input value="Anonymous" type="text" id="name" class="form-control">
     <label class="active" for="name">*Your Name</label>
 </div>
 <br>
-<button type="button" class="btn btn-amber" onclick="populateStationField()">Report Your Spotting!</button>
+<div id = "post-thankyou">
+    <p class="instructions">Thank you for your contribution! Your post has been added to the update feed above.</p>
+</div>
+<button type="button" class="btn btn-amber" onclick="showPostThankyou()">Post Your Spotting!</button>
 
               </div>
     </main>
@@ -11897,6 +11901,18 @@
         document.getElementById("selected-station").value = selectedStation;
 
     //    stationField.value = "Hello";   //selectedStation;
+    }
+</script>
+
+<script>
+    function showPostThankyou() {
+        document.getElementById("post-thankyou").style.display = "block";
+
+        var fade_out = function() {
+  $("#post-thankyou").fadeOut();
+}
+
+setTimeout(fade_out, 5000);
     }
 </script>
 
