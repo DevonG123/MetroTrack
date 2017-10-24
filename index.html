@@ -166,7 +166,8 @@
  
 <!--Southern Station select-->
 <div id="southern-station-select">
-<select class="mdb-select colorful-select dropdown-ins" onchange="getStation(this);">
+<select class="mdb-select colorful-select dropdown-ins" onchange="getStation(this); populateStationField(this);
+">
     <option value="" disabled selected>Southern Line Stations</option>
     <option value="CapeTown">Cape Town</option>
     <option value="Woodstock">Woodstock</option>
@@ -362,9 +363,9 @@
 </div>
 <br>
         <br>
-<h5>Select train:</h5>
+<h5>Select train number:</h5>
 
-<p class="instructions" id="instruct2">*Please select your station and direction in order to view the timetable*</p>
+<p class="instructions" id="instruct2">*Please first select your station and direction above in order to view the timetable*</p>
 
 
 <!--TIMETABLES-->
@@ -11739,7 +11740,7 @@
                 <hr>
                 <br>
     <div class="md-form">
-    <input value="O150" type="text" id="form2" class="form-control" disabled>
+    <input value="102" type="text" id="form2" class="form-control" disabled>
     <label class="disabled" for="form6">Selected Train</label>
 </div>
     
@@ -11851,54 +11852,11 @@
                <hr>
                 <h1>3. Share train location</h1> 
                 <hr>
-     <h5>Select the station you're at:</h5>
+     <h5>Your selected station:</h5>
+     <p class="tip">(from above)</p>
     
- <!--Dropdown yellow-->
-        <div class="dropdown">
-
-            <!--Trigger-->
-            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Station</button>
-            
-
-            <!--Menu-->
-            <div class="dropdown-menu dropdown-warning scrollable-menu">
-                <a class="dropdown-item" href="#share-section">Same As Above</a>
-                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#share-section">Cape Town</a>
-                <a class="dropdown-item" href="#share-section">Woodstock</a>
-                <a class="dropdown-item" href="#share-section">Salt River</a>
-                <a class="dropdown-item" href="#share-section">Observatory</a>
-                <a class="dropdown-item" href="#share-section">Mowbray</a>
-                <a class="dropdown-item" href="#share-section">Rosebank</a>
-                <a class="dropdown-item" href="#share-section">Rondebosch</a>
-                <a class="dropdown-item" href="#share-section">Newlands</a>
-                <a class="dropdown-item" href="#share-section">Claremont</a>
-                <a class="dropdown-item" href="#share-section">Harfield Road</a>
-                <a class="dropdown-item" href="#share-section">Kenilworth</a>
-                <a class="dropdown-item" href="#share-section">Wynberg</a>
-                <a class="dropdown-item" href="#share-section">Wittebome</a>
-                <a class="dropdown-item" href="#share-section">Plumstead</a>
-                <a class="dropdown-item" href="#share-section">Steurhof</a>
-                <a class="dropdown-item" href="#share-section">Dieprivier</a>
-                <a class="dropdown-item" href="#share-section">Heathfield</a>
-                <a class="dropdown-item" href="#share-section">Retreat</a>
-                <a class="dropdown-item" href="#share-section">Steenberg</a>
-                <a class="dropdown-item" href="#share-section">Lakeside</a>
-                <a class="dropdown-item" href="#share-section">False Bay</a>
-                <a class="dropdown-item" href="#share-section">Muizenberg</a>
-                <a class="dropdown-item" href="#share-section">St. James</a>
-                <a class="dropdown-item" href="#share-section">Kalk Bay</a>
-                <a class="dropdown-item" href="#share-section">Fish Hoek</a>
-                <a class="dropdown-item" href="#share-section">Sunny Cove</a>
-                <a class="dropdown-item" href="#share-section">Glencairn</a>
-                <a class="dropdown-item" href="#share-section">Simon's Town</a>
-            </div>
-        </div>
-        <!--/Dropdown yellow-->
-        <br>
          <div class="md-form">
-    <input value="Kenilworth" type="text" id="form2" class="form-control" disabled>
-    <label class="disabled" for="form6">Selected Station</label>
+    <input value="*Awaiting selection from above*" type="text" id="selected-station" class="form-control" disabled>
 </div>
 
 <h5>Select the train you've spotted:</h5>
@@ -11942,7 +11900,7 @@
         <!--/Dropdown yellow-->
         <br>
          <div class="md-form">
-    <input value="O150" type="text" id="form2" class="form-control" disabled>
+    <input value="102" type="text" id="form2" class="form-control" disabled>
     <label class="disabled" for="form6">Selected Train</label>
 </div>
 <br>
@@ -11965,6 +11923,14 @@
         
     </script>
 
+<script>
+    function populateStationField(selectedStation) {
+        var stationField document.getElementById("selected-station");
+
+        stationField.value = "Hello";   //selectedStation;
+    }
+</script>
+
 <script> //Show/hide train timetables
 
 var Station = "noSelection"; // Globally scoped object
@@ -11978,6 +11944,8 @@ var Direction = "noSelection";
         hideAllTables();
 
         showHideTimetables();
+
+        
     }
 
     function getDirection(d) {
