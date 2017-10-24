@@ -63,9 +63,9 @@
                 <ul class="extras-nav">
                     <li><a href="Help_FAQs.html" class="waves-effect"><i class="fa fa-question-circle-o"></i> Help &amp; FAQs </a>
                     </li>
-                    <li><a href="#track-section" class="waves-effect"><i class="fa fa-envelope-o"></i> Contact Us</a>
+                    <li><a href="Contact_Us.html" class="waves-effect"><i class="fa fa-envelope-o"></i> Contact Us</a>
                     </li>
-                    <li><a href="#share-section" class="waves-effect"><i class="fa fa-users"></i> About Us</a>
+                    <li><a href="About_Us.html" class="waves-effect"><i class="fa fa-users"></i> About Us</a>
                     </li>
                 </ul>  
             </li>
@@ -11974,12 +11974,6 @@ var Direction = "noSelection";
         var station = s.options[s.selectedIndex].value;
         
         Station = station;
-
-    /*    if (station == "Kenilworth") {
-            Station = "kenilworth";
-        } else if (station == "Mowbray") {
-            Station = "mowbray";
-        }   */
        
         hideAllTables();
 
@@ -12019,11 +12013,61 @@ var Direction = "noSelection";
        var directionLocal = Direction;
 
         var instruction2 = document.getElementById("instruct2");
-        
-     var kenilworth_I_W = document.getElementById("kenilworth-inward-weekday");
-     var kenilworth_O_W = document.getElementById("kenilworth-outward-weekday");
+    
+    var capeTown_O_W = document.getElementById("capeTown-outward-weekday");
+    var woodstock_I_W = document.getElementById("woodstock-inward-weekday");
+    var woodstock_O_W = document.getElementById("woodstock-outward-weekday");
+    var saltRiver_I_W = document.getElementById("saltRiver-inward-weekday");
+    var saltRiver_O_W = document.getElementById("saltRiver-outward-weekday");
+    var observatory_I_W = document.getElementById("observatory-inward-weekday");
+    var observatory_O_W = document.getElementById("observatory-outward-weekday");
     var mowbray_I_W = document.getElementById("mowbray-inward-weekday");
     var mowbray_O_W = document.getElementById("mowbray-outward-weekday");
+    var rosebank_I_W = document.getElementById("rosebank-inward-weekday");
+    var rosebank_O_W = document.getElementById("rosebank-outward-weekday");
+    var rondebosch_I_W = document.getElementById("rondebosch-inward-weekday");
+    var rondebosch_O_W = document.getElementById("rondebosch-outward-weekday");
+    var newlands_I_W = document.getElementById("newlands-inward-weekday");
+    var newlands_O_W = document.getElementById("newlands-outward-weekday");
+    var claremont_I_W = document.getElementById("claremont-inward-weekday");
+    var claremont_O_W = document.getElementById("claremont-outward-weekday");
+    var harfieldRoad_I_W = document.getElementById("harfieldRoad-inward-weekday");
+    var harfieldRoad_O_W = document.getElementById("harfieldRoad-outward-weekday");
+    var kenilworth_I_W = document.getElementById("kenilworth-inward-weekday");
+    var kenilworth_O_W = document.getElementById("kenilworth-outward-weekday");
+    var wynberg_I_W = document.getElementById("wynberg-inward-weekday");
+    var wynberg_O_W = document.getElementById("wynberg-outward-weekday");
+    var wittebome_I_W = document.getElementById("wittebome-inward-weekday");
+    var wittebome_O_W = document.getElementById("wittebome-outward-weekday");
+    var plumstead_I_W = document.getElementById("plumstead-inward-weekday");
+    var plumstead_O_W = document.getElementById("plumstead-outward-weekday");
+    var steurhof_I_W = document.getElementById("steurhof-inward-weekday");
+    var steurhof_O_W = document.getElementById("steurhof-outward-weekday");
+    var dieprivier_I_W = document.getElementById("dieprivier-inward-weekday");
+    var dieprivier_O_W = document.getElementById("dieprivier-outward-weekday");
+    var heathfield_I_W = document.getElementById("heathfield-inward-weekday");
+    var heathfield_O_W = document.getElementById("heathfield-outward-weekday");
+    var retreat_I_W = document.getElementById("retreat-inward-weekday");
+    var retreat_O_W = document.getElementById("retreat-outward-weekday");
+    var steenberg_I_W = document.getElementById("steenberg-inward-weekday");
+    var steenberg_O_W = document.getElementById("steenberg-outward-weekday");
+    var lakeside_I_W = document.getElementById("lakeside-inward-weekday");
+    var lakeside_O_W = document.getElementById("lakeside-outward-weekday");
+    var falseBay_I_W = document.getElementById("falseBay-inward-weekday"); 
+    var falseBay_O_W = document.getElementById("falseBay-outward-weekday");
+    var muizenberg_I_W = document.getElementById("muizenberg-inward-weekday");
+    var muizenberg_O_W = document.getElementById("muizenberg-outward-weekday");
+    var stJames_I_W = document.getElementById("stJames-inward-weekday");
+    var stJames_O_W = document.getElementById("stJames-outward-weekday");
+    var kalkBay_I_W = document.getElementById("kalkBay-inward-weekday");
+    var kalkBay_O_W = document.getElementById("kalkBay-outward-weekday");
+    var fishHoek_I_W = document.getElementById("fishHoek-inward-weekday");
+    var fishHoek_O_W = document.getElementById("fishHoek-outward-weekday");
+    var sunnyCove_I_W = document.getElementById("sunnyCove-inward-weekday");
+    var sunnyCove_O_W = document.getElementById("sunnyCove-outward-weekday");
+    var glencairn_I_W = document.getElementById("glencairn-inward-weekday");
+    var glencairn_O_W = document.getElementById("glencairn-outward-weekday");
+    var simonsTown_I_W = document.getElementById("simonsTown-inward-weekday");  
 
 
 
@@ -12034,19 +12078,251 @@ var Direction = "noSelection";
        }
 
 
-       if (stationLocal == "Kenilworth") {
+        if (stationLocal == "CapeTown") {
             if (directionLocal == "i") {
-                kenilworth_I_W.style.display = "block";  
+                  
             } else if (directionLocal == "o") {
-                kenilworth_O_W.style.display = "block";
+                capeTown_O_W.style.display = "block";
             } else {}
             }
+        else if (stationLocal == "Woodstock") {
+            if (directionLocal == "i") {
+                woodstock_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                woodstock_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "SaltRiver") {
+            if (directionLocal == "i") {
+                saltRiver_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                saltRiver_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Observatory") {
+            if (directionLocal == "i") {
+                observatory_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                observatory_O_W.style.display = "block";
+            }
+            else {}
+        }
         else if (stationLocal == "Mowbray") {
             if (directionLocal == "i") {
                 mowbray_I_W.style.display = "block";
             }
             else if (directionLocal == "o") {
                 mowbray_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Rosebank") {
+            if (directionLocal == "i") {
+                rosebank_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                rosebank_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Rondebosch") {
+            if (directionLocal == "i") {
+                rondebosch_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                rondebosch_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Newlands") {
+            if (directionLocal == "i") {
+                newlands_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                newlands_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Claremont") {
+            if (directionLocal == "i") {
+                claremont_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                claremont_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "HarfieldRoad") {
+            if (directionLocal == "i") {
+                harfieldRoad_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                harfieldRoad_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Kenilworth") {
+            if (directionLocal == "i") {
+                kenilworth_I_W.style.display = "block";  
+            } else if (directionLocal == "o") {
+                kenilworth_O_W.style.display = "block";
+            } else {}
+            }
+        else if (stationLocal == "Wynberg") {
+            if (directionLocal == "i") {
+                wynberg_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                wynberg_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Wittebome") {
+            if (directionLocal == "i") {
+                wittebome_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                wittebome_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Plumstead") {
+            if (directionLocal == "i") {
+                plumstead_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                plumstead_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Steurhof") {
+            if (directionLocal == "i") {
+                steurhof_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                steurhof_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Dieprivier") {
+            if (directionLocal == "i") {
+                dieprivier_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                dieprivier_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Heathfield") {
+            if (directionLocal == "i") {
+                heathfield_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                heathfield_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Retreat") {
+            if (directionLocal == "i") {
+                retreat_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                retreat_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Steenberg") {
+            if (directionLocal == "i") {
+                steenberg_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                steenberg_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Lakeside") {
+            if (directionLocal == "i") {
+                lakeside_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                lakeside_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "FalseBay") {
+            if (directionLocal == "i") {
+                falseBay_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                falseBay_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Muizenberg") {
+            if (directionLocal == "i") {
+                muizenberg_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                muizenberg_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "StJames") {
+            if (directionLocal == "i") {
+                stJames_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                stJames_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "KalkBay") {
+            if (directionLocal == "i") {
+                kalkBay_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                kalkBay_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "FishHoek") {
+            if (directionLocal == "i") {
+                fishHoek_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                fishHoek_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "SunnyCove") {
+            if (directionLocal == "i") {
+                sunnyCove_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                sunnyCove_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "Glencairn") {
+            if (directionLocal == "i") {
+                glencairn_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+                glencairn_O_W.style.display = "block";
+            }
+            else {}
+        }
+        else if (stationLocal == "SimonsTown") {
+            if (directionLocal == "i") {
+                simonsTown_I_W.style.display = "block";
+            }
+            else if (directionLocal == "o") {
+               
             }
             else {}
         }

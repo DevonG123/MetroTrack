@@ -5,7 +5,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MetroTrack</title>
+    <title>MetroTrack - Contact Us</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -61,13 +61,30 @@
             </li>
             <li>
                 <ul class="extras-nav">
-                    <li><a href="#choose-section" class="waves-effect"><i class="fa fa-question-circle-o"></i> Help &amp; FAQs </a>
+                    <li><a href="Help_FAQs.html" class="waves-effect"><i class="fa fa-question-circle-o"></i> Help &amp; FAQs </a>
                     </li>
-                    <li><a href="#track-section" class="waves-effect"><i class="fa fa-envelope-o"></i> Contact Us</a>
+                    <li><a href="Contact_Us.html" class="waves-effect"><i class="fa fa-envelope-o"></i> Contact Us</a>
                     </li>
-                    <li><a href="#share-section" class="waves-effect"><i class="fa fa-users"></i> About Us</a>
+                    <li><a href="About_Us.html" class="waves-effect"><i class="fa fa-users"></i> About Us</a>
                     </li>
                 </ul>  
+            </li>
+            <li>
+                <ul class="collapsible collapsible-accordion extras-nav">
+                <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-link" aria-hidden="true"></i>Useful Links<i class="fa fa-angle-down rotate-icon"></i></a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a target="_blank" href="http://www.metrorail.co.za/maps/CT_RailMap.pdf" class="waves-effect">Train Line Map</a>
+                            </li>
+                            <li><a target="_blank" href="https://app.gometro.co.za" class="waves-effect">GoMetro</a>
+                            </li>
+                             <li><a target="_blank" href="http://cttrains.co.za/" class="waves-effect">CT Trains</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                </ul>
+
             </li>
             <!--/. Side navigation links -->
             <div class="sidenav-bg mask-strong"></div>
@@ -79,7 +96,7 @@
             <div class="float-left">
                 <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
             </div>
-             <!-- Breadcrumb--
+            <!-- Breadcrumb--
             <div class="breadcrumb-dn mr-auto">
                 <img src="img/MetroTrack Name (white).png">
             </div>
@@ -108,56 +125,70 @@
     
     <!--Main Layout-->
     <main>
-<div class="help-section">
+<div class="contact-section">
     <hr>
-<h1>Help &amp FAQs</h1>
+<h1>Contact Us</h1>
 <hr>
 
+
+
     <div class="card">
-        <div class="card-header">
-         <h4>How do I find the train I need?</h4>
+     <div class="card-body" id="contact-us-text">
+        <h2>We'd love to hear from you!</h2>
+
+         <p>Whether it be difficulties you're experiencing with the website, an error, incorrect information or any other comment - we would appreciate your feedback. </p>
      </div>
-     <div class="card-body">
-         <p>You can quickly navigate to the <strong>'Choose your train'</strong> section on the main page by selecting it from the slide out menu (opened with the menu button in the top left of the screen).</p>
-         <p>This section allows you to access the timetable (provided by Metrorail) for every station in the Cape Town rail system.</p>
-         <p>First <strong>Select a Line</strong>, then <strong>Select a Station</strong>, the select your <strong>Direction of Travel</strong>.</p>
-         <p>Your selected station will be displayed below along with the timetable.</p>
-         <p>You will then be able to choose the train that has an Expected Arrival Time that best suites you.</p>
-     </div>
+        </div>
+
+     <div class="card">
+     <div class="card-body" id="contact-us-input">
+
+<div class="md-form">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" id="form104" class="form-control">
+                <label for="form104">Your name</label>
+            </div>
+
+            <div class="md-form">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="text" id="form105" class="form-control">
+                <label for="form105">Your email</label>
+            </div>
+<br>
+
+        <h5>Select feedback type:</h5>
+
+        <div id="feedback-type-select">
+<select class="mdb-select colorful-select dropdown-ins">
+    <option value="" disabled selected>Feedback Type</option>
+    <option>Website Error</option>
+    <option>Incorrect Information</option>
+    <option>Usage Difficulties</option>
+    <option>Other</option>         
+</select>
+    </div>
+    <br>
+        <h5>Your feedback:</h5>
+
+        <div class="form-group basic-textarea rounded-corners shadow-textarea">
+        <textarea class="form-control z-depth-1" id="feedback-textarea" rows="10" placeholder="Your comments..."></textarea>
+</div>
+
+<div id="feedback-button">
+<button type="button" class="btn btn-amber" onclick="submitFeedback()">Submit Feedback</button>
+</div>
+
+<div id="feedback-thankyou">
+    <p class="instructions">Thank you for your feedback.</p>
+</div>
+    
 
 
+     </div>
         </div>
     
 
-    <div class="card">
-        <div class="card-header">
-         <h4>How do I find out where my train is?</h4>
-     </div>
-     <div class="card-body">
-         <p>Once you have finished the first step of <strong>Choosing your train</strong>(as explained above), the <strong>'Track your train'</strong> section below will be populated with a feed displaying the time and station at which your selected train was last spotted.</p>
-     </div>
-
-
-        </div>
-
-
-        <div class="card">
-        <div class="card-header">
-         <h4>How do I report when I see a train?</h4>
-     </div>
-     <div class="card-body">
-         <p>Reporting any train you spot, no matter the direction it's travelling, simply navigate to the <strong>'Share train location'</strong> section, selct the <strong>Station</strong> you are at and the train you have just spotted. The number of the train is displayed on the front and back ends of it in red lights so keep a lookout as the train enters and/or leaves the station.</p>
-         <p>You are also able to fill out the <em>optional</em> <strong> Name</strong> field if you would like your name to accompany your update in to the train feed. This will allow you to see how many people appreciated your post and marked it as 'helpful'.</p>
-     </div>
-
-
-        </div>
     </div>
-
-
-
-
-
 
 
     </main>
@@ -166,6 +197,25 @@
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="./Material Design Bootstrap Template_files/compiled.min.js.download"></script>
+
+    <script> // Material Select Initialization
+ $(document).ready(function() {
+    $('.mdb-select').material_select();
+  });</script>
+
+  <script>
+      
+function submitFeedback() {
+    var feedbackThankyou = document.getElementById("feedback-thankyou");
+    var feedbackTextarea = document.getElementById("feedback-textarea");
+
+    feedbackThankyou.style.display = "block";
+
+    feedbackTextarea.value = "";
+}
+
+  </script>
+
     <script>
         
         // SideNav Initialization
