@@ -11740,8 +11740,8 @@
                 <hr>
                 <br>
     <div class="md-form">
-    <input value="102" type="text" id="form2" class="form-control" disabled>
-    <label class="disabled" for="form6">Selected Train</label>
+    <input value="102" type="text" id="selected-train1" class="form-control" disabled>
+    <label class="disabled" for="selected-train1">Selected Train</label>
 </div>
     
 
@@ -11857,59 +11857,26 @@
     
          <div class="md-form">
     <input value="*Awaiting selection from above*" type="text" id="selected-station" class="form-control" disabled>
+    <label class="disabled" for="selected-station">Selected Station</label>
 </div>
 
-<h5>Select the train you've spotted:</h5>
+<h5>Train you've spotted:</h5>
+<p class="tip">(selected from above)</p>
 
- <!--Dropdown yellow-->
-        <div class="dropdown">
+ 
 
-            <!--Trigger-->
-            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Train</button>
-            
-
-            <!--Menu-->
-            <div class="dropdown-menu dropdown-warning scrollable-menu">
-                <a class="dropdown-item" href="#share-section">Same As Above
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#share-section">O102
-                </a>
-                <a class="dropdown-item" href="#share-section">O104
-                </a>
-                <a class="dropdown-item" href="#share-section">O106
-                </a>
-                <a class="dropdown-item" href="#share-section">O108
-                </a>
-                <a class="dropdown-item" href="#share-section">O110
-                </a>
-                <a class="dropdown-item" href="#share-section">O112
-                </a>
-                <a class="dropdown-item" href="#share-section">O114
-                </a>
-                <a class="dropdown-item" href="#share-section">O116
-                </a>
-                <a class="dropdown-item" href="#share-section">O118
-                </a>
-                <a class="dropdown-item" href="#share-section">O120
-                </a>
-            
-                
-            </div>
-        </div>
-        <!--/Dropdown yellow-->
         <br>
          <div class="md-form">
-    <input value="102" type="text" id="form2" class="form-control" disabled>
-    <label class="disabled" for="form6">Selected Train</label>
-</div>
+    <input value="102" type="text" id="selected-train2" class="form-control" disabled>
+    <label class="disabled" for="selected-train2">Selected Train</label>
+</div>  
 <br>
 <div class="md-form">
     <input value="Anonymous" type="text" id="name" class="form-control">
     <label class="active" for="name">*Your Name</label>
 </div>
 <br>
-<button type="button" class="btn btn-amber">Report Your Spotting!</button>
+<button type="button" class="btn btn-amber" onclick="populateStationField()">Report Your Spotting!</button>
 
               </div>
     </main>
@@ -11924,10 +11891,12 @@
     </script>
 
 <script>
-    function populateStationField(selectedStation) {
-        var stationField document.getElementById("selected-station");
+    function populateStationField(stationSelection) {
+        var selectedStation = stationSelection.options[stationSelection.selectedIndex].value;
 
-        stationField.value = "Hello";   //selectedStation;
+        document.getElementById("selected-station").value = selectedStation;
+
+    //    stationField.value = "Hello";   //selectedStation;
     }
 </script>
 
